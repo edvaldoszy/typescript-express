@@ -1,0 +1,35 @@
+{
+  "name": "typescript-express",
+  "version": "1.0.0",
+  "description": "Repositórico de uma API utilizando typescript, express e sequelize",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./bin/www",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edvaldoszy/typescript-express.git"
+  },
+  "keywords": [
+    "typescript",
+    "express",
+    "sequelize",
+    "api"
+  ],
+  "author": "Edvaldo Szymonek <edvaldoszy@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edvaldoszy/typescript-express/issues"
+  },
+  "homepage": "https://github.com/edvaldoszy/typescript-express#readme",
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "express": "^4.15.2",
+    "express-load": "^1.1.15",
+    "morgan": "~1.7.0",
+    "mysql": "^2.13.0",
+    "path": "^0.12.7",
+    "sequelize": "^3.30.2"
+  }
+}

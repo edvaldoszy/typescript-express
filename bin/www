@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+const application = require("../dist/Application");
+var http = require("http");
+
+const DEFAULT_HTTP_PORT = 3000;
+var port = normalizePort(process.env.PORT || process.argv[2] || DEFAULT_HTTP_PORT);
+if (!port) {
+    throw new Error("Port number must be a valid integer greater than zero");
+}
+
+var server = http.createServer(application);
+server.listen(port);
+//server.on("error", onError);
+//server.on("listening", onListening);
+
+function normalizePort(value) {
+    var port = parseInt(value);
+
+    if (isNaN(port)) {
+        return DEFAULT_HTTP_PORT;
+    }
+
+    if (port > 0) {
+        return port;
+    }
+    
+    return false;
+}
